@@ -22,13 +22,7 @@ namespace NimbleGoat
     {
         public MainWindow()
         {
-            //sup suckers - salem
             InitializeComponent();
-
-            //ChanChan
-            //Yaakov
-            //Garrick
-            //This Is My Comment :)
         }
     }
 }
