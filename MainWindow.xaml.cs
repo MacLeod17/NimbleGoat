@@ -22,6 +22,7 @@ namespace NimbleGoat
     {
         public MainWindow()
         {
+            //sup suckers - salem
             InitializeComponent();
         }
     }
