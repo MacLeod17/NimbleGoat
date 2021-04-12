@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NimbleGoat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="NimbleGoat" Height="450" Width="800">
     <Grid>
-
+        <TextBox HorizontalAlignment="Left" Margin="329,75,0,0" Text="The Nimble Goat" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        
     </Grid>
 </Window>
