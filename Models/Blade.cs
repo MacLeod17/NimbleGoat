@@ -6,5 +6,7 @@ namespace NimbleGoat.Models
 {
     class Blade
     {
+        public int[] rowNum;
+        public string imageName;
     }
 }
