@@ -4,7 +4,12 @@ using System.Text;
 
 namespace NimbleGoat.Models
 {
-    class Player
+    public abstract class Player
     {
+        public string name { get; set; }
+        public string imageName { get; set; }
+
+        public abstract bool EndTurn();
+        public abstract bool Turn();
     }
 }

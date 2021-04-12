@@ -4,7 +4,16 @@ using System.Text;
 
 namespace NimbleGoat.Models
 {
-    class Human
+    public class Human : Player
     {
+        public override bool EndTurn()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Turn()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
