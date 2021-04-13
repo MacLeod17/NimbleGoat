@@ -9,7 +9,7 @@ namespace NimbleGoat.Models
         #region Singleton
         private static Game _instance;
 
-        public Game Instance { get { return _instance; } }
+        public static Game Instance { get { return _instance; } }
 
         public Game()
         {

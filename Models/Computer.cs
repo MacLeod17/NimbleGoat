@@ -4,15 +4,22 @@ using System.Text;
 
 namespace NimbleGoat.Models
 {
-    class Computer : Player
+    public class Computer : Player
     {
-        enum eMode
+        public enum eMode
         {
             EASY,
             HARD
         }
 
         eMode mode = eMode.EASY;
+        Random rand;
+
+        public Computer(eMode m)
+        {
+            mode = m;
+            rand = new Random();
+        }
 
         public override bool Turn()
         {
@@ -33,7 +40,12 @@ namespace NimbleGoat.Models
 
         private void EasyTurn()
         {
+            int numVals = 0;
 
+            while (numVals == 0)
+            {
+                //numVals = Game
+            }
         }
 
         private void HardTurn()
