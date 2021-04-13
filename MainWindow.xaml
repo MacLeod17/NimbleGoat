@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="NimbleGoat" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="329,75,0,0" Text="The Nimble Goat" 
-                 TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
-        
+        <TextBox HorizontalAlignment="Left" Margin="275,25,0,0" Text="The Nimble Goat"
+                 VerticalAlignment="Top" Width="250" FontSize="32" />
+
     </Grid>
 </Window>
