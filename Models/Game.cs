@@ -23,7 +23,24 @@ namespace NimbleGoat.Models
         
         public bool SwapTurn()
         {
-            return true;
+            try
+            {
+                if (playerTurn == players[0])
+                {
+                    playerTurn = players[1];
+                    return true;
+                }
+                else
+                {
+                    playerTurn = players[0];
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
 
         public bool EndTurn()
