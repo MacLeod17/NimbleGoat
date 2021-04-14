@@ -45,7 +45,7 @@ namespace NimbleGoat.Models
 
         public bool EndTurn()
         {
-            //Fuck off i touched it
+            SwapTurn();
             return true;
         }
 
