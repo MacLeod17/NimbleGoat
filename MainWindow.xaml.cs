@@ -20,9 +20,13 @@ namespace NimbleGoat
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainWindow mainWindow;
+        public static Frame mainFrame;
+
         public MainWindow()
-        {
+        { 
             InitializeComponent();
+            mainFrame = MainWindowFrame;
         }
     }
 }

@@ -5,10 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NimbleGoat"
         mc:Ignorable="d"
-        Title="NimbleGoat" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="275,25,0,0" Text="The Nimble Goat"
-                 VerticalAlignment="Top" Width="250" FontSize="32" />
+        Title="NimbleGoat" Height="450" Width="800" WindowStyle="None" ResizeMode="CanMinimize">
+    <Grid Background="#35F2FC">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock  Text="The Nimble Goat" VerticalAlignment="Center" Width="auto" 
+                    FontSize="60" HorizontalAlignment="Center"/>
 
+        <Frame x:Name="MainWindowFrame" Source="Pages/Menu-Page.xaml" Grid.Row="1"/>
     </Grid>
 </Window>

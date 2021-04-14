@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NimbleGoat.Windows
+namespace NimbleGoat.Pages
 {
     /// <summary>
-    /// Interaction logic for GameWindow.xaml
+    /// Interaction logic for Instructions_Page.xaml
     /// </summary>
-    public partial class GameWindow : Window
+    public partial class Instructions_Page : Page
     {
-        public GameWindow()
+        public Instructions_Page()
         {
             InitializeComponent();
         }
