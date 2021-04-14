@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:NimbleGoat"
         mc:Ignorable="d"
         Title="NimbleGoat" Height="450" Width="800" WindowStyle="None" ResizeMode="CanMinimize">
+   
     <Grid Background="#35F2FC">
         <Grid.RowDefinitions>
             <RowDefinition Height="75"/>

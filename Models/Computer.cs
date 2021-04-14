@@ -40,12 +40,18 @@ namespace NimbleGoat.Models
 
         private void EasyTurn()
         {
-            int numVals = 0;
+            int numVal = 0;
+            int rowNum = -1;
 
-            while (numVals == 0)
+            while (numVal == 0)
             {
-                //numVals = Game
+                rowNum = rand.Next(0, Game.Instance.board.Length);
+                numVal = Game.Instance.board[rowNum];
             }
+
+            int numItemsToTake = rand.Next(1, Game.Instance.board[numVal]);
+
+            //Interact with board using this information
         }
 
         private void HardTurn()

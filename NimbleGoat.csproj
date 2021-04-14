@@ -7,7 +7,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
+    <None Remove="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-Bold.ttf" />
+    <None Remove="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-Italic.ttf" />
+    <None Remove="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-Regular.ttf" />
+    <None Remove="Assets\Images\Blades_1.png" />
+    <None Remove="Assets\Images\Blades_2.png" />
+    <None Remove="Assets\Images\Blades_3.png" />
+    <None Remove="Assets\Images\Blades_4.png" />
+    <None Remove="Assets\Images\Blades_5.png" />
+    <None Remove="Assets\Images\Blades_6.png" />
+    <None Remove="Assets\Images\Blades_7.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-Bold.ttf" />
+    <Resource Include="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-BoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-Italic.ttf" />
+    <Resource Include="Assets\Fonts\Balsamiq_Sans\BalsamiqSans-Regular.ttf" />
+    <Resource Include="Assets\Images\Blades_1.png" />
+    <Resource Include="Assets\Images\Blades_2.png" />
+    <Resource Include="Assets\Images\Blades_3.png" />
+    <Resource Include="Assets\Images\Blades_4.png" />
+    <Resource Include="Assets\Images\Blades_5.png" />
+    <Resource Include="Assets\Images\Blades_6.png" />
+    <Resource Include="Assets\Images\Blades_7.png" />
   </ItemGroup>
 
 </Project>
