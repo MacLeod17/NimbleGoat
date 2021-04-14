@@ -25,7 +25,17 @@ namespace NimbleGoat.Pages
 
         private void btnPlayAgain_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow.mainFrame.Navigate(new System.Uri("Pages/PlayerSelection-Page.xaml", UriKind.Relative));
+        }
 
+        private void btnMainMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.mainFrame.Navigate(new System.Uri("Pages/Menu-Page.xaml", UriKind.Relative));
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
