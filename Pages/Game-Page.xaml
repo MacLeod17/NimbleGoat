@@ -37,24 +37,28 @@
 
         <!--Row two-->
         <Button x:Name="btnRowOne" Grid.Row="1" Grid.Column="1"
-                Margin="10" Click="btnRowOne_Click">
+                Margin="10" Background="#beff66" BorderBrush="#38b800"
+                BorderThickness="2" Click="btnRowOne_Click">
             <Image x:Name="imgOne" Source="../Assets/Images/Blades_1.png"/>
         </Button>
 
         <!--Row three-->
         <Button x:Name="btnRowTwo" Grid.Row="2" Grid.Column="1"
-                Margin="10" Click="btnRowTwo_Click">
+                Margin="10" Background="#beff66" BorderBrush="#38b800"
+                BorderThickness="2" Click="btnRowTwo_Click">
             <Image x:Name="imgTwo" Source="../Assets/Images/Blades_3.png"/>
         </Button>
 
         <!--Row four-->
         <Button x:Name="btnRowThree" Grid.Row="3" Grid.Column="1"
-                Margin="10" Click="btnRowThree_Click">
+                Margin="10" Background="#beff66" BorderBrush="#38b800"
+                BorderThickness="2" Click="btnRowThree_Click">
             <Image x:Name="imgThree" Source="../Assets/Images/Blades_5.png"/>
         </Button>
 
         <Button x:Name="btnEndTurn" Grid.Row="3" Grid.Column="2"
-                Margin="10" FontSize="20" Click="btnEndTurn_Click">
+                Margin="10" FontSize="20" Background="#beff66" 
+                BorderBrush="#38b800" BorderThickness="2">
             End Turn
         </Button>
     </Grid>

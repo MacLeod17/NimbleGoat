@@ -21,6 +21,7 @@ namespace NimbleGoat.Pages
     {
         int[] board;
         int currentVal = -1;
+        int currentRow = -1;
 
         public Game_Page()
         {
@@ -30,7 +31,13 @@ namespace NimbleGoat.Pages
 
         private void btnRowOne_Click(object sender, RoutedEventArgs e)
         {
-            if(currentVal == -1)
+            btnRowTwo.IsEnabled = false;
+            btnRowThree.IsEnabled = false;
+            btnEndTurn.IsEnabled = true;
+
+            currentRow = 0;
+
+            if (currentVal == -1)
                 currentVal = board[0] - 1;
             else
             {
@@ -39,6 +46,10 @@ namespace NimbleGoat.Pages
                     currentVal = board[0];
                     btnRowTwo.IsEnabled = true;
                     btnRowThree.IsEnabled = true;
+                    btnEndTurn.IsEnabled = false;
+
+                    currentVal = -1;
+                    currentRow = -1;
                 }
                 else
                 {
@@ -46,13 +57,17 @@ namespace NimbleGoat.Pages
                 }
             }
 
-            imgOne.Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + currentVal + ".png", UriKind.Relative));
-            btnRowTwo.IsEnabled = false;
-            btnRowThree.IsEnabled = false;
+            imgOne.Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + ((currentVal == -1) ? board[0] : currentVal) + ".png", UriKind.Relative));
         }
 
         private void btnRowTwo_Click(object sender, RoutedEventArgs e)
         {
+            btnRowOne.IsEnabled = false;
+            btnRowThree.IsEnabled = false;
+            btnEndTurn.IsEnabled = true;
+
+            currentRow = 1;
+
             if (currentVal == -1)
                 currentVal = board[1] - 1;
             else
@@ -62,6 +77,10 @@ namespace NimbleGoat.Pages
                     currentVal = board[1];
                     btnRowOne.IsEnabled = true;
                     btnRowThree.IsEnabled = true;
+                    btnEndTurn.IsEnabled = false;
+
+                    currentVal = -1;
+                    currentRow = -1;
                 }
                 else
                 {
@@ -69,13 +88,17 @@ namespace NimbleGoat.Pages
                 }
             }
 
-            imgTwo.Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + currentVal + ".png", UriKind.Relative));
-            btnRowOne.IsEnabled = false;
-            btnRowThree.IsEnabled = false;
+            imgTwo.Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + ((currentVal == -1) ? board[1] : currentVal) + ".png", UriKind.Relative));
         }
 
         private void btnRowThree_Click(object sender, RoutedEventArgs e)
         {
+            btnRowOne.IsEnabled = false;
+            btnRowTwo.IsEnabled = false;
+            btnEndTurn.IsEnabled = true;
+
+            currentRow = 2;
+
             if (currentVal == -1)
                 currentVal = board[2] - 1;
             else
@@ -85,6 +108,10 @@ namespace NimbleGoat.Pages
                     currentVal = board[2];
                     btnRowOne.IsEnabled = true;
                     btnRowTwo.IsEnabled = true;
+                    btnEndTurn.IsEnabled = false;
+
+                    currentVal = -1;
+                    currentRow = -1;
                 }
                 else
                 {
@@ -92,13 +119,21 @@ namespace NimbleGoat.Pages
                 }
             }
 
-            imgThree.Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + currentVal + ".png", UriKind.Relative));
-            btnRowOne.IsEnabled = false;
-            btnRowTwo.IsEnabled = false;
+            imgThree.Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + ((currentVal == -1) ? board[2] : currentVal) + ".png", UriKind.Relative));
         }
 
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
+            if(currentRow == -1)
+            {
+                return;
+            }
+
+            Game.Instance.board[currentRow] = currentVal;
+            board = Game.Instance.board;
+
+            Game.Instance.EndTurn();
+
             currentVal = -1;
         }
     }

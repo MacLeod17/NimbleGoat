@@ -16,13 +16,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Content="Play Game" Width="200" Height="auto" Background="#35F2FC"
-                Grid.Row="0" Margin="10" x:Name="btnPlayGame" Click="btnPlayGame_Click"/>
-        <Button Content="Instructions" Width="200" Height="auto" Background="#35F2FC"
-                Grid.Row="1" Margin="10" x:Name="btnInstructions" Click="btnInstructions_Click"/>
-        <Button Content="g o a t" Width="200" Height="auto" Background="#35F2FC"
-                Grid.Row="2" Margin="10" x:Name="btnGOAT" Click="btnGOAT_Click"/>
-        <Button Content="Exit" Width="200" Height="auto" Background="#35F2FC"
-                Grid.Row="3" Margin="10" x:Name="btnExit" Click="btnExit_Click"/>
+        <Button Content="Play Game" Width="200" Height="auto" Background="#beff66" 
+                BorderBrush="#38b800" BorderThickness="2" Grid.Row="0" Margin="10" 
+                x:Name="btnPlayGame" Click="btnPlayGame_Click"/>
+        <Button Content="Instructions" Width="200" Height="auto" Background="#beff66" 
+                BorderBrush="#38b800" BorderThickness="2" Grid.Row="1" Margin="10" 
+                x:Name="btnInstructions" Click="btnInstructions_Click"/>
+        <Button Content="g o a t" Width="200" Height="auto" Background="#beff66" 
+                BorderBrush="#38b800" BorderThickness="2" Grid.Row="2" Margin="10" 
+                x:Name="btnGOAT" Click="btnGOAT_Click"/>
+        <Button Content="Exit" Width="200" Height="auto" Background="#beff66" 
+                BorderBrush="#38b800" BorderThickness="2" Grid.Row="3" Margin="10" 
+                x:Name="btnExit" Click="btnExit_Click"/>
     </Grid>
 </Page>
