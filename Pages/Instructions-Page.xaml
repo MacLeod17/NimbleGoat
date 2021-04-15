@@ -7,8 +7,27 @@
       mc:Ignorable="d" 
       d:DesignHeight="375" d:DesignWidth="800"
       Title="Instructions_Page">
+    
+    <Page.Background>
+        <ImageBrush ImageSource="../Assets/Images/field.jpg" Stretch="Fill"/>
+    </Page.Background>
 
     <Grid Background="LawnGreen">
-        <TextBlock Text="Instructions" FontSize="69"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Instructions" FontSize="69" VerticalAlignment="Top"
+                   HorizontalAlignment="Center" Width="auto" Height="auto"
+                   Grid.Row="0"/>
+        <TextBlock Grid.Row="1" FontSize="24" TextWrapping="Wrap" Width="450"
+                   Padding="10" TextAlignment="Justify" Background="#adff66">
+            The Nimble Goat is played by starting with rows of blades of grass. 
+            Players take turns taking any number, of the numbers given,
+            of objects from one of the piles. 
+            <LineBreak/> <LineBreak/>
+            Whoever takes the last of the objects wins!
+        </TextBlock>
     </Grid>
 </Page>
