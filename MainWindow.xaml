@@ -16,6 +16,6 @@
         <TextBlock  Text="The Nimble Goat" VerticalAlignment="Center" Width="auto" 
                     FontSize="60" HorizontalAlignment="Center"/>
 
-        <Frame x:Name="MainWindowFrame" Source="Pages/Game-Page.xaml" Grid.Row="1"/>
+        <Frame x:Name="MainWindowFrame" Source="Pages/Menu-Page.xaml" Grid.Row="1"/>
     </Grid>
 </Window>

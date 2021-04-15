@@ -13,7 +13,17 @@ namespace NimbleGoat.Models
 
         public Game()
         {
-            _instance = this;
+            
+        }
+
+        public bool Initialize()
+        {
+            if (_instance == null)
+            {
+                _instance = new Game();
+                return true;
+            }
+            return false;
         }
         #endregion
 
