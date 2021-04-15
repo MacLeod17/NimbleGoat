@@ -7,10 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="375" d:DesignWidth="800"
       Title="Instructions_Page">
-    
-    <Page.Background>
-        <ImageBrush ImageSource="../Assets/Images/field.jpg" Stretch="Fill"/>
-    </Page.Background>
 
     <Grid Background="LawnGreen">
         <Grid.RowDefinitions>
