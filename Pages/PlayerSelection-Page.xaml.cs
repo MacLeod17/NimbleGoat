@@ -78,7 +78,7 @@ namespace NimbleGoat.Windows
         private void PVCPlaybtn_Click(object sender, RoutedEventArgs e)
         {
             Player p1 = new Human() { name = p1NameTxt.Text };
-            Player p2 = new Computer(Computer.eMode.EASY) { name = "Vincent Van Goat" };
+            Player p2 = new Computer(comMode) { name = "Vincent Van Goat" };
 
             Game.Instance.players[0] = p1;
             Game.Instance.players[1] = p2;
