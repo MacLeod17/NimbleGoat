@@ -23,9 +23,12 @@ namespace NimbleGoat.Pages
         int currentVal = -1;
         int currentRow = -1;
 
+        public static TextBlock TxtPlayerTurn;
+
         public Game_Page()
         {
             InitializeComponent();
+            TxtPlayerTurn = txtPlayerTurn;
             board = new int[]{ 1, 3, 5};
         }
 
@@ -134,7 +137,7 @@ namespace NimbleGoat.Pages
 
             Game.Instance.EndTurn();
 
-            txtPlayerTurn.Text = Game.Instance.playerTurn.name;
+            //txtPlayerTurn.Text = Game.Instance.playerTurn.name;
 
             currentVal = -1;
         }

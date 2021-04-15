@@ -14,6 +14,8 @@ namespace NimbleGoat.Models
 
         eMode mode = eMode.EASY;
         Random rand;
+        int numItemsToTake;
+        int rowNum;
 
         public Computer(eMode m)
         {
@@ -41,7 +43,7 @@ namespace NimbleGoat.Models
         private void EasyTurn()
         {
             int numVal = 0;
-            int rowNum = -1;
+            rowNum = -1;
 
             while (numVal == 0)
             {
@@ -49,9 +51,9 @@ namespace NimbleGoat.Models
                 numVal = Game.Instance.board[rowNum];
             }
 
-            int numItemsToTake = rand.Next(1, Game.Instance.board[numVal]);
+            numItemsToTake = rand.Next(1, Game.Instance.board[numVal]);
 
-            //Interact with board using this information
+            EndTurn();
         }
 
         private void HardTurn()
@@ -61,6 +63,10 @@ namespace NimbleGoat.Models
 
         public override bool EndTurn()
         {
+            Game.Instance.board[rowNum] = numItemsToTake;
+
+            Game.Instance.EndTurn();
+
             return true;
         }
     }

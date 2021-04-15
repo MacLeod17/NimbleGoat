@@ -28,12 +28,10 @@ namespace NimbleGoat.Models
                 if (playerTurn == players[0])
                 {
                     playerTurn = players[1];
-                    return true;
                 }
                 else
                 {
                     playerTurn = players[0];
-                    return true;
                 }
             }
             catch (Exception ex)
@@ -41,6 +39,9 @@ namespace NimbleGoat.Models
                 Console.WriteLine(ex.Message);
                 return false;
             }
+
+            Pages.Game_Page.TxtPlayerTurn.Text = playerTurn.name;
+            return true;
         }
 
         public bool EndTurn()
