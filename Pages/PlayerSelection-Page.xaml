@@ -11,26 +11,26 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+           
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
+            
             <TextBlock Grid.Column="0" Text="Player vs. Player" HorizontalAlignment="Center" Width="auto" FontSize="40"/>
-            <TextBox Text="Player1Name" FontSize="32" Grid.Column="0" Width="200" Height="50" VerticalAlignment="Top" Margin="70"/>
-            <TextBox Text="Player2Name" FontSize="32" Grid.Column="0" Width="200" Height="50" VerticalAlignment="Center"/>
-            <Button Grid.Column="0" VerticalAlignment="Bottom" Margin="0 0 150 100" Height="30" Width="70" Content="EASY"/>
-            <Button Grid.Column="0" VerticalAlignment="Bottom" Margin="150 0 0 100" Height="30" Width="70" Content="HARD"/>
-
+            <TextBox x:Name="p1NameTxt" Text="Player1Name" FontSize="32" Grid.Column="0" Width="200" Height="50" VerticalAlignment="Top" Margin="70"/>
+            <TextBox x:Name="p2NameTxt" Text="Player2Name" FontSize="32" Grid.Column="0" Width="200" Height="50" VerticalAlignment="Center"/>
+            <Button x:Name="EasyPVPbtn" Grid.Column="0" VerticalAlignment="Bottom" Margin="0 0 150 100" Height="30" Width="70" Content="EASY" Click="EasyPVPbtn_Click"/>
+            <Button x:Name="HardPVPbtn" Grid.Column="0" VerticalAlignment="Bottom" Margin="150 0 0 100" Height="30" Width="70" Content="HARD" Click="HardPVPbtn_Click"/>
+            
             <TextBlock Grid.Column="1" Text="Player vs. Computer" HorizontalAlignment="Center" Width="auto" FontSize="40"/>
-            <TextBox Text="PlayerName" FontSize="32" Grid.Column="1" Width="200" Height="50" VerticalAlignment="Top" Margin="100"/>
-            <Button Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 150 150" Height="30" Width="70" Content="EASY"/>
-            <Button Grid.Column="1" VerticalAlignment="Bottom" Margin="150 0 0 150" Height="30" Width="70" Content="HARD"/>
-
-            <Button Grid.Column="0" VerticalAlignment="Bottom" Margin="30" Height="50" Width="100" Content="PLAY!"/>
-            <Button Grid.Column="1" VerticalAlignment="Bottom" Margin="30" Height="50" Width="100" Content="PLAY!"/>
+            <TextBox x:Name="ComGameNameTxt" Text="PlayerName" FontSize="32" Grid.Column="1" Width="200" Height="50" VerticalAlignment="Top" Margin="100"/>
+            <Button x:Name="EasyPVCbtn" Grid.Column="1" VerticalAlignment="Bottom" Margin="0 0 150 150" Height="30" Width="70" Content="EASY" Click="EasyPVCbtn_Click"/>
+            <Button x:Name="HardPVCbtn" Grid.Column="1" VerticalAlignment="Bottom" Margin="150 0 0 150" Height="30" Width="70" Content="HARD" Click="HardPVCbtn_Click"/>
+            
+            <Button x:Name="PVPPlaybtn" Grid.Column="0" VerticalAlignment="Bottom" Margin="30" Height="50" Width="100" Content="PLAY!" Click="PVPPlaybtn_Click"/>
+            <Button x:Name="PVCPlaybtn" Grid.Column="1" VerticalAlignment="Bottom" Margin="30" Height="50" Width="100" Content="PLAY!" Click="PVCPlaybtn_Click"/>
         </Grid>
     </Grid>
 </Page>

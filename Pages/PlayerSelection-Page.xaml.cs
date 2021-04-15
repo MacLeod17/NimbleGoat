@@ -22,5 +22,35 @@ namespace NimbleGoat.Windows
         {
             InitializeComponent();
         }
+
+        private void EasyPVPbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HardPVPbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EasyPVCbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HardPVCbtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PVPPlaybtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PVCPlaybtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
