@@ -35,24 +35,24 @@ namespace NimbleGoat.Windows
 
         private void EasyPVPbtn_Click(object sender, RoutedEventArgs e)
         {
-            //gameMode = eGameType.Easy;
+            gameMode = eGameType.Easy;
         }
 
         private void HardPVPbtn_Click(object sender, RoutedEventArgs e)
         {
-            //gameMode = eGameType.Hard;
+            gameMode = eGameType.Hard;
         }
 
         private void EasyPVCbtn_Click(object sender, RoutedEventArgs e)
         {
             comMode = Computer.eMode.EASY;
-            //gameMode = eGameType.Easy;
+            gameMode = eGameType.Easy;
         }
 
         private void HardPVCbtn_Click(object sender, RoutedEventArgs e)
         {
             comMode = Computer.eMode.HARD;
-            //gameMode = eGameType.Hard;
+            gameMode = eGameType.Hard;
         }
 
         private void PVPPlaybtn_Click(object sender, RoutedEventArgs e)
@@ -71,7 +71,7 @@ namespace NimbleGoat.Windows
             }
             else
             {
-                //MainWindow.mainFrame.Navigate(new System.Uri("Pages/Game2-Page.xaml", UriKind.Relative));
+                MainWindow.mainFrame.Navigate(new System.Uri("Pages/Hard-Game-Page.xaml", UriKind.Relative));
             }
         }
 
@@ -91,7 +91,7 @@ namespace NimbleGoat.Windows
             }
             else
             {
-                //MainWindow.mainFrame.Navigate(new System.Uri("Pages/Game2-Page.xaml", UriKind.Relative));
+                MainWindow.mainFrame.Navigate(new System.Uri("Pages/Hard-Game-Page.xaml", UriKind.Relative));
             }
         }
     }
