@@ -59,6 +59,8 @@ namespace NimbleGoat.Models
 
         public bool EndTurn()
         {
+            playerTurn.Turn();
+            playerTurn.EndTurn();
             SwapTurn();
             return true;
         }
