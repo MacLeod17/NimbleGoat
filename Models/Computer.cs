@@ -75,7 +75,7 @@ namespace NimbleGoat.Models
             //Computer is loosing
             else
             {
-
+                EasyTurn();
             }
         }
 
