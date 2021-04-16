@@ -23,7 +23,10 @@ namespace NimbleGoat.Models
                 _instance = new Game();
                 return true;
             }
-            return false;
+            else
+            {
+                return Instance.Reset();
+            }
         }
         #endregion
 
