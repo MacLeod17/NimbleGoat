@@ -134,7 +134,7 @@ namespace NimbleGoat.Pages
                 return;
             }
 
-            Game.Instance.board[currentRow] = currentVal;
+            Game.Instance.board[currentRow] -= currentVal;
             board = Game.Instance.board;
 
             Game.Instance.EndTurn();
