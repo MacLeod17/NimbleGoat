@@ -24,12 +24,25 @@ namespace NimbleGoat.Pages
         int currentRow = -1;
 
         public static TextBlock TxtPlayerTurn;
+        public static Image[] rows = new Image[4];
+        public static Button[] buttons = new Button[4];
 
         public Hard_Game_Page()
         {
             InitializeComponent();
             TxtPlayerTurn = txtPlayerTurn;
-            board = new int[]{ 1, 3, 5, 7};
+            board = new int[] { 1, 3, 5, 7};
+            Game.Instance.board = board;
+
+            rows[0] = imgOne;
+            rows[1] = imgTwo;
+            rows[2] = imgThree;
+            rows[3] = imgFour;
+
+            buttons[0] = btnRowOne;
+            buttons[1] = btnRowTwo;
+            buttons[2] = btnRowThree;
+            buttons[3] = btnRowFour;
 
             btnEndTurn.IsEnabled = false;
         }

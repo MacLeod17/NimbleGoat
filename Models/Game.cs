@@ -46,6 +46,7 @@ namespace NimbleGoat.Models
             {
                 //Game over
                 MainWindow.mainFrame.Navigate(new System.Uri("Pages/GameOver-Page.xaml", UriKind.Relative));
+                return true;
             }
 
             try
@@ -65,14 +66,34 @@ namespace NimbleGoat.Models
                 return false;
             }
 
-            Pages.Game_Page.TxtPlayerTurn.Text = playerTurn.name;
+            if (Windows.PlayerSelection_Page.gameMode == Windows.PlayerSelection_Page.eGameType.Easy)
+                Pages.Game_Page.TxtPlayerTurn.Text = playerTurn.name;
+            else
+                Pages.Hard_Game_Page.TxtPlayerTurn.Text = playerTurn.name;
+
+
+            playerTurn.Turn();
             return true;
         }
 
         public bool EndTurn()
         {
-            playerTurn.Turn();
-            playerTurn.EndTurn();
+            if(Windows.PlayerSelection_Page.gameMode == Windows.PlayerSelection_Page.eGameType.Easy)
+            {
+                Pages.Game_Page.board = board;
+                foreach (var butt in Pages.Game_Page.buttons)
+                {
+                    butt.IsEnabled = true;
+                }
+            }
+            else
+            {
+                foreach (var butt in Pages.Hard_Game_Page.buttons)
+                {
+                    butt.IsEnabled = true;
+                }
+            }
+            
             SwapTurn();
             return true;
         }

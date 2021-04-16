@@ -19,17 +19,28 @@ namespace NimbleGoat.Pages
     /// </summary>
     public partial class Game_Page : Page
     {
-        int[] board;
+        public static int[] board;
         int currentVal = -1;
         int currentRow = -1;
 
         public static TextBlock TxtPlayerTurn;
+        public static Image[] rows = new Image[3];
+        public static Button[] buttons = new Button[3];
 
         public Game_Page()
         {
             InitializeComponent();
             TxtPlayerTurn = txtPlayerTurn;
+            rows[0] = imgOne;
+            rows[1] = imgTwo;
+            rows[2] = imgThree;
+
+            buttons[0] = btnRowOne;
+            buttons[1] = btnRowTwo;
+            buttons[2] = btnRowThree;
+
             board = new int[]{ 1, 3, 5};
+            Game.Instance.board = board;
 
             btnEndTurn.IsEnabled = false;
         }
@@ -134,7 +145,7 @@ namespace NimbleGoat.Pages
                 return;
             }
 
-            Game.Instance.board[currentRow] -= currentVal;
+            Game.Instance.board[currentRow] = currentVal;
             board = Game.Instance.board;
 
             Game.Instance.EndTurn();

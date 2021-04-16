@@ -25,8 +25,8 @@ namespace NimbleGoat.Windows
             Hard
         }
 
-        public Computer.eMode comMode;
-        public eGameType gameMode = eGameType.Easy;
+        public static Computer.eMode comMode;
+        public static eGameType gameMode = eGameType.Easy;
 
         public PlayerSelection_Page()
         {

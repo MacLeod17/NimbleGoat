@@ -32,7 +32,7 @@
                    VerticalAlignment="Center" HorizontalAlignment="Center" 
                    FontSize="40"
                    Grid.Row="0" Grid.ColumnSpan="3">
-            Turn = ""??? Some fuckhead
+            Player 1
         </TextBlock>
 
         <!--Row two-->
@@ -58,7 +58,8 @@
 
         <Button x:Name="btnEndTurn" Grid.Row="3" Grid.Column="2"
                 Margin="10" FontSize="20" Background="#beff66" 
-                BorderBrush="#38b800" BorderThickness="2">
+                BorderBrush="#38b800" BorderThickness="2"
+                Click="btnEndTurn_Click">
             End Turn
         </Button>
     </Grid>

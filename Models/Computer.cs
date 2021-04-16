@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Media.Imaging;
+using NimbleGoat.Pages;
 
 namespace NimbleGoat.Models
 {
@@ -47,12 +49,14 @@ namespace NimbleGoat.Models
 
             while (numVal == 0)
             {
-                rowNum = rand.Next(0, Game.Instance.board.Length);
+                rowNum = rand.Next(0, Game.Instance.board.Length - 1);
                 numVal = Game.Instance.board[rowNum];
             }
 
-            numItemsToTake = rand.Next(1, Game.Instance.board[numVal]);
+            numItemsToTake = rand.Next(1, Game.Instance.board[rowNum]);
 
+            int num = Game.Instance.board[rowNum] - numItemsToTake;
+            Game_Page.rows[rowNum].Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + ((num == -1) ? Game.Instance.board[0] : num) + ".png", UriKind.Relative));
             EndTurn();
         }
 
@@ -71,6 +75,10 @@ namespace NimbleGoat.Models
                         numItemsToTake = board[i] - (board[i] ^ nimSum);
                     }
                 }
+
+                int num = Game.Instance.board[rowNum] - numItemsToTake;
+                Hard_Game_Page.rows[rowNum].Source = new BitmapImage(new Uri(@"\Assets\Images\Blades_" + ((num == -1) ? Game.Instance.board[0] : num) + ".png", UriKind.Relative));
+                EndTurn();
             }
             //Computer is loosing
             else
@@ -93,7 +101,7 @@ namespace NimbleGoat.Models
         public override bool EndTurn()
         {
             Game.Instance.board[rowNum] -= numItemsToTake;
-
+            
             Game.Instance.EndTurn();
 
             return true;
