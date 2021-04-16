@@ -8,12 +8,12 @@ namespace NimbleGoat.Models
     {
         public override bool EndTurn()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public override bool Turn()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

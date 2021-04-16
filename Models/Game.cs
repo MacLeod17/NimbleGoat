@@ -36,6 +36,18 @@ namespace NimbleGoat.Models
         
         public bool SwapTurn()
         {
+            int total = 0;
+            for (int i = 0; i < board.Length; i++)
+            {
+                total += board[i];
+            }
+
+            if(total == 0)
+            {
+                //Game over
+                MainWindow.mainFrame.Navigate(new System.Uri("Pages/GameOver-Page.xaml", UriKind.Relative));
+            }
+
             try
             {
                 if (playerTurn == players[0])
@@ -59,6 +71,8 @@ namespace NimbleGoat.Models
 
         public bool EndTurn()
         {
+            playerTurn.Turn();
+            playerTurn.EndTurn();
             SwapTurn();
             return true;
         }
