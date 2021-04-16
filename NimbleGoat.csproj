@@ -34,4 +34,10 @@
     <Resource Include="Assets\Images\Blades_7.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Pages\Hard-Game-Page.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
 </Project>

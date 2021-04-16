@@ -25,7 +25,7 @@ namespace NimbleGoat.Windows
 
         private void btnPlayGame_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.mainFrame.Navigate(new System.Uri("Pages/PlayerSelection-Page.xaml", UriKind.Relative));
+            MainWindow.mainFrame.Navigate(new System.Uri("Pages/Hard-Game-Page.xaml", UriKind.Relative));
         }
 
         private void btnInstructions_Click(object sender, RoutedEventArgs e)
