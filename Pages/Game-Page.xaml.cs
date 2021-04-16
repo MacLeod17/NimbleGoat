@@ -30,6 +30,8 @@ namespace NimbleGoat.Pages
             InitializeComponent();
             TxtPlayerTurn = txtPlayerTurn;
             board = new int[]{ 1, 3, 5};
+
+            btnEndTurn.IsEnabled = false;
         }
 
         private void btnRowOne_Click(object sender, RoutedEventArgs e)
