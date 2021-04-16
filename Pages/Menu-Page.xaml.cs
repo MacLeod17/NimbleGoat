@@ -38,8 +38,7 @@ namespace NimbleGoat.Windows
 
         private void btnGOAT_Click(object sender, RoutedEventArgs e)
         {
-            //secret content - https://www.youtube.com/watch?v=wBInLWlA49U
-            //just for you ethan <3
+            MainWindow.mainFrame.Navigate(new System.Uri("Pages/GOAT - Page.xaml", UriKind.Relative));
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)

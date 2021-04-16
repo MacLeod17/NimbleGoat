@@ -18,6 +18,8 @@
     <None Remove="Assets\Images\Blades_5.png" />
     <None Remove="Assets\Images\Blades_6.png" />
     <None Remove="Assets\Images\Blades_7.png" />
+    <None Remove="Assets\Images\field.jpg" />
+    <None Remove="Assets\Images\goat.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +34,8 @@
     <Resource Include="Assets\Images\Blades_5.png" />
     <Resource Include="Assets\Images\Blades_6.png" />
     <Resource Include="Assets\Images\Blades_7.png" />
+    <Resource Include="Assets\Images\field.jpg" />
+    <Resource Include="Assets\Images\goat.png" />
   </ItemGroup>
 
   <ItemGroup>

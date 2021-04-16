@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="GOAT___Page">
 
-    <Grid>
-        
+    <Grid Background="Black">
+        <Image Source="..\Assets\Images\goat.png" Stretch="Fill"/>
+
+        <TextBlock Text="g o a t" Foreground="Red" FontSize="69"
+                   FontFamily="Comic Sans MS" Margin="15"/>
     </Grid>
 </Page>
