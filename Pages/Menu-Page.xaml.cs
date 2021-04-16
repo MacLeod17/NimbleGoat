@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NimbleGoat.Models;
 
 namespace NimbleGoat.Windows
 {
@@ -25,6 +26,8 @@ namespace NimbleGoat.Windows
 
         private void btnPlayGame_Click(object sender, RoutedEventArgs e)
         {
+            Game.Initialize();
+
             MainWindow.mainFrame.Navigate(new System.Uri("Pages/PlayerSelection-Page.xaml", UriKind.Relative));
         }
 

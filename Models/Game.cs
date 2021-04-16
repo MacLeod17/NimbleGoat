@@ -11,12 +11,12 @@ namespace NimbleGoat.Models
 
         public static Game Instance { get { return _instance; } }
 
-        public Game()
+        private Game()
         {
-            
+            players = new Player[2];
         }
 
-        public bool Initialize()
+        public static bool Initialize()
         {
             if (_instance == null)
             {
@@ -62,6 +62,11 @@ namespace NimbleGoat.Models
 
         public bool Reset()
         {
+            players[0] = null;
+            players[1] = null;
+
+            players = new Player[2];
+
             return true;
         }
     }

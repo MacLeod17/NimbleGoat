@@ -137,7 +137,7 @@ namespace NimbleGoat.Pages
 
             Game.Instance.EndTurn();
 
-            //txtPlayerTurn.Text = Game.Instance.playerTurn.name;
+            txtPlayerTurn.Text = Game.Instance.playerTurn.name;
 
             currentVal = -1;
         }
